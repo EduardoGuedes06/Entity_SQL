@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bmUE/sVz8YbVMzpjI7Sf3ZTD6uGK837pmlg2IcEGLRAt6aW/lfrZpK0edVz/ixJ9iGK/RtP+GAKVq/KiaEzYTQ==",
+  "dgSpecHash": "KwYG+BinioXxAb7eXAJxHdYnbybu83LsSOoVAHjEZpR72e73ZRUcMfKpfNgVYyxuOvbpnCQZIcTymq2Dma4I6g==",
   "success": true,
-  "projectFilePath": "C:\\Eduardo\\Git\\Entity_SQL\\Blog\\Blog.csproj",
+  "projectFilePath": "C:\\Eduardo\\Git\\Entity_SQL\\Entity_SQL\\Blog\\Blog.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\TT - SMSA\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\TT - SMSA\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

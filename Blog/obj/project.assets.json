@@ -3048,11 +3048,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Eduardo\\Git\\Entity_SQL\\Blog\\Blog.csproj",
+      "projectUniqueName": "C:\\Eduardo\\Git\\Entity_SQL\\Entity_SQL\\Blog\\Blog.csproj",
       "projectName": "Blog",
-      "projectPath": "C:\\Eduardo\\Git\\Entity_SQL\\Blog\\Blog.csproj",
+      "projectPath": "C:\\Eduardo\\Git\\Entity_SQL\\Entity_SQL\\Blog\\Blog.csproj",
       "packagesPath": "C:\\Users\\TT - SMSA\\.nuget\\packages\\",
-      "outputPath": "C:\\Eduardo\\Git\\Entity_SQL\\Blog\\obj\\",
+      "outputPath": "C:\\Eduardo\\Git\\Entity_SQL\\Entity_SQL\\Blog\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
