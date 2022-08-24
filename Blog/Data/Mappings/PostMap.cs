@@ -1,15 +1,12 @@
-﻿using Blog.Models;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Blog.Models;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Blog.Data.Mappings
 {
-    internal class PostMap : IEntityTypeConfiguration<Post>
+    public class PostMap : IEntityTypeConfiguration<Post>
     {
         public void Configure(EntityTypeBuilder<Post> builder)
         {
@@ -39,41 +36,31 @@ namespace Blog.Data.Mappings
                 .IsUnique();
 
             // Relacionamentos
-            builder
-                .HasOne(x => x.Author)
-                .WithMany(x => x.Posts)
-                .HasConstraintName("FK_Post_Author")
+            builder.HasOne(x=>x.Author)
+                .WithMany(x=>x.Posts)
+                .HasConstraintName("fk_post_author")
                 .OnDelete(DeleteBehavior.Cascade);
 
-            builder
-                .HasOne(x => x.Category)
-                .WithMany(x => x.Posts)
-                .HasConstraintName("FK_Post_Category")
+              builder.HasOne(x=>x.Category)
+                .WithMany(x=>x.Posts)
+                .HasConstraintName("fk_post_category")
                 .OnDelete(DeleteBehavior.Cascade);
 
-            //Relacionamentos
-            builder
-                .HasMany(x => x.Tags)
-                .WithMany(x => x.Posts)
+              builder.HasMany(x=>x.Tags)
+                .WithMany(x=>x.Posts)
                 .UsingEntity<Dictionary<string, object>>(
-                    "PostTag",
-            post => post
-                .HasOne<Tag>()
-                .WithMany()
-                .HasForeignKey("PostId")
-                .HasConstraintName("FK_PostRole_PostId")
-                .OnDelete(DeleteBehavior.Cascade),
-            tag => tag
-                .HasOne<Post>()
-                .WithMany()
-                .HasForeignKey("TagId")
-                .HasConstraintName("FK_PostTag_TagId")
-                .OnDelete(DeleteBehavior.Cascade));
-
-
-
-
+                    "PostTag", 
+                    post => post.HasOne<Tag>()
+                        .WithMany()
+                        .HasForeignKey("PostId")
+                        .HasConstraintName("fk_postTag"),
+                    tag => tag.HasOne<Post>()
+                    .WithMany()
+                    .HasForeignKey("TagId")
+                    .HasConstraintName("fk_postTag_TagId")
+                );
 
         }
+            
     }
 }
